@@ -8,7 +8,7 @@ function App() {
     {
       title : 'Car Insurance',
       amount : 'Rs. 10,000',
-      date : new Date(2021, 12, 7)
+      date : new Date(2021,2, 12)
     },
     {
       title : 'Tuition Fee',
@@ -27,6 +27,7 @@ function App() {
 
     }
   ]
+  
   return (
     <div className="App">
       <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date} />

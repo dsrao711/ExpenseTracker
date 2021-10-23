@@ -6,7 +6,8 @@
     padding: 0.5rem;
     margin: 0.5rem 0;
     border-radius: 22px;
-    background-color: #FAF7FF;
+    background-color: #F0EDFF;
+    font-family: 'Lato', sans-serif;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -22,10 +23,10 @@
 
 .expense-item h2 {
     color: #3a3a3a;
-    font-size: 1rem;
     flex: 1;
     margin: 0 1rem;
     color: #474554;
+    font-weight: 900;
 }
 
 .expense-item__price {
