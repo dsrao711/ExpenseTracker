@@ -5,20 +5,48 @@ const ExpenseForm = () => {
 
     // Naive approach
 
-    const [enteredTitle, setEnteredTitle] = useState('')
-    const [enteredAmount, setEnteredAmount] = useState('')
-    const [enteredDate, setEnteredDate] = useState('')
+    // const [enteredTitle, setEnteredTitle] = useState('')
+    // const [enteredAmount, setEnteredAmount] = useState('')
+    // const [enteredDate, setEnteredDate] = useState('')
+
+    // const titleChangeHandler = (event) => {
+    //     setEnteredTitle(event.target.value)
+    // }
+
+    // const AmountChangeHandler = (event) => {
+    //     setEnteredAmount(event.target.value)
+    // }
+
+    // const DateChangeHandler = (event) => {
+    //     setEnteredDate(event.target.value)
+    // }
+
+
+    const [userInput, setUserInput] = useState({
+        enteredTitle : '' ,
+        enteredAmount : '' ,
+        enteredDate : ''
+    })
 
     const titleChangeHandler = (event) => {
-        setEnteredTitle(event.target.value)
+        setUserInput({
+            ...userInput , 
+            enteredTitle : event.target.value
+        })
     }
 
-    const AmountChangeHandler = (event) => {
-        setEnteredAmount(event.target.value)
+    const amountChangeHandler = (event) => {
+        setUserInput({
+            ...userInput , 
+            enteredAmount : event.target.value
+        })
     }
-
-    const DateChangeHandler = (event) => {
-        setEnteredDate(event.target.value)
+    
+    const dateChangeHandler = (event) =>{
+        setUserInput({
+            ...userInput , 
+            enteredDate : event.target.value
+        })
     }
 
     return (
