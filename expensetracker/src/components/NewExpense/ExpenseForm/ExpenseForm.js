@@ -26,6 +26,7 @@ const ExpenseForm = (props) => {
             amount : enteredAmount , 
             date : new Date(enteredDate)
         }
+        // Forward data to NewExpense component
         props.onSaveExpenseData(expenseData)
     }
 

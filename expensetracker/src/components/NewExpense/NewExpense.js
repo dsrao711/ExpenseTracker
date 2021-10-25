@@ -9,6 +9,7 @@ const NewExpense = (props) => {
             ...expensesEntered ,
             id : Math.random().toString() 
         }; 
+        // Forward data to App.js
         props.onAddExpense(expensesData)
     }
 
