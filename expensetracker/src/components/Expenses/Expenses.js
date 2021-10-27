@@ -7,9 +7,8 @@ import './Expenses.css'
 
 export default function Expenses(props) {
 
-
     const [filteryear , setFilterYear] = useState('2021')
-    const [expenses , setExpenses ] = useState(DUMMY_EXPENSES)
+    
 
     const filterByYear = (selectedYear) => {
         console.log(selectedYear)
@@ -17,16 +16,19 @@ export default function Expenses(props) {
     }
 
     
+    
 
     return (
         <div>
             <div className="expenses">
-                <ExpensesFilter defaultYear = {filteryear} onFilterYear = {filterByYear} />
-                {props.expenses.map((expense) => {
-                    <ExpenseItem title = {expense.title} amount = {expense.amount} date = {expense.date} />
-                })}
+                <ExpensesFilter defaultYear = {filteryear} onFilterYear = {filterByYear} selected = {filteryear}/>
+                {props.items.filter((expense) => (expense.date.getFullYear().toString() === filteryear)).map(filtered_expense => (
+                        <ExpenseItem key = {filtered_expense.id} title = {filtered_expense.title} amount = {filtered_expense.amount} date = {filtered_expense.date} />
+                ))}        
             </div>
         </div>
 
     )
 }
+
+ 
